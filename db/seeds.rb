@@ -9,11 +9,11 @@ FavoriteStore.destroy_all
 
 # Creating Users
 5.times do 
-    User.create({username: Faker::Internet.unique.username, location: 'Washington, DC'})
+    User.create(username: Faker::Internet.unique.username, location: 'Washington, DC', password: 'password')
 end
 
-michael = User.create({username: 'michael', location: 'Washington, DC'})
-esther = User.create({username: 'esther', location: 'Washington, DC'})
+michael = User.create(username: 'michael', location: 'Washington, DC', password: 'password')
+esther = User.create(username: 'esther', location: 'Washington, DC', password: 'password')
 
 # Creating Ice Cream Flavors
 10.times do 
