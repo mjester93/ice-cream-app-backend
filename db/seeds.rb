@@ -4,6 +4,7 @@ IceCream.destroy_all
 Store.destroy_all
 IceCreamStore.destroy_all
 Review.destroy_all
+FavoriteStore.destroy_all
 
 
 # Creating Users
@@ -44,5 +45,10 @@ User.all.each do |user|
         store_id: Store.all.sample.id, 
         text: Faker::Quotes::Shakespeare.hamlet_quote,
         rating: rand(1...5)
+    })
+
+    FavoriteStore.create({
+        user_id: user.id,
+        store_id: Store.all.sample.id
     })
 end
