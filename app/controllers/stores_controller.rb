@@ -4,7 +4,8 @@ class StoresController < ApplicationController
         stores = Store.all
 
         render json: stores.to_json(
-            :except => [:created_at, :updated_at]
+            :except => [:created_at, :updated_at],
+            :methods => [:ice_cream_count]
         )
     end
 
