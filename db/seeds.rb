@@ -3,6 +3,7 @@ User.destroy_all
 IceCream.destroy_all
 Store.destroy_all
 IceCreamStore.destroy_all
+Review.destroy_all
 
 
 # Creating Users
@@ -33,4 +34,15 @@ Store.all.each do |store|
     3.times do 
         IceCreamStore.create({store_id: store.id, ice_cream_id: IceCream.all.sample.id})
     end
+end
+
+
+# Adding two reviews for each user
+User.all.each do |user|
+    Review.create({
+        user_id: user.id, 
+        store_id: Store.all.sample.id, 
+        text: Faker::Quotes::Shakespeare.hamlet_quote,
+        rating: rand(1...5)
+    })
 end
