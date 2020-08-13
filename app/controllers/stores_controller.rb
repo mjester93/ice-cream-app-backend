@@ -10,7 +10,12 @@ class StoresController < ApplicationController
     end
 
     def show
+        store = Store.find(params[:id])
 
+        render json: store.to_json(
+            :except => [:created_at, :updated_at],
+            :include => [:ice_creams, :reviews]
+        )
     end
 
 end
