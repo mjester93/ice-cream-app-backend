@@ -7,4 +7,12 @@ class Store < ApplicationRecord
     def ice_cream_count
         return self.ice_creams.count
     end
+
+    def avg_rating
+        if self.reviews.count != 0 then
+            return (self.reviews.map {|review| review.rating}.sum) / (self.reviews.count)
+        else
+            return 0
+        end 
+    end
 end

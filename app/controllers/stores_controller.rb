@@ -5,7 +5,7 @@ class StoresController < ApplicationController
 
         render json: stores.to_json(
             :except => [:created_at, :updated_at],
-            :methods => [:ice_cream_count]
+            :methods => [:ice_cream_count, :avg_rating]
         )
     end
 
