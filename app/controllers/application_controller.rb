@@ -7,14 +7,9 @@ class ApplicationController < ActionController::API
 
     def logged_in?
         headers = request.headers["Authorization"]
-        token = headers.split(" ")[1]
 
-        begin
-            user_id = JWT.decode(token, "DC060120", "HS256")[0]["user_id"]
-            user = User.find(user_id)
-        rescue 
-            user = nil
-        end
+        user_id = JWT.decode(headers, "DC060120", "HS256")[0]["user_id"]
+        user = User.find_by(user_id)
 
         render json: {error: "Please log in"} unless user
     end

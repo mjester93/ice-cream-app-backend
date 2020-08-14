@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+    skip_before_action :logged_in?, only: [:index, :show]
 
     def index
         stores = Store.all
@@ -29,5 +30,4 @@ class StoresController < ApplicationController
             }
         )
     end
-
 end
