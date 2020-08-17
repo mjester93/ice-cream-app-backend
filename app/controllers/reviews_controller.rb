@@ -6,7 +6,14 @@ class ReviewsController < ApplicationController
 
         if review.valid?
             review.save
-            render json: review
+            render json: review.to_json(
+                :only => [:text, :rating, :photo],
+                :include => {
+                    :user => {
+                        :only => [:username, :location]
+                    }
+                }
+            )
         else
             render json: {error: 'There is an error'}
         end
