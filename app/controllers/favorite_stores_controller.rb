@@ -3,9 +3,11 @@ class FavoriteStoresController < ApplicationController
 
     def create
         favorite_store = FavoriteStore.new(
-            user_id: params[:userId],
-            store_id: params[:storeId]
+            user_id: params[:user_id],
+            store_id: params[:store_id]
         )
+
+        byebug
 
         if favorite_store.valid?
             favorite_store.save
