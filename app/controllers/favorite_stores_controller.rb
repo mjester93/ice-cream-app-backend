@@ -7,8 +7,6 @@ class FavoriteStoresController < ApplicationController
             store_id: params[:store_id]
         )
 
-        byebug
-
         if favorite_store.valid?
             favorite_store.save
             render json: favorite_store
@@ -17,5 +15,13 @@ class FavoriteStoresController < ApplicationController
         end
     end
 
+    def is_user_favorite
+        favorite_store = FavoriteStore.find_by(user_id: params[:user_id], store_id: params[:store_id])
 
+        if (!favorite_store.nil?)
+            render json: {result: true}
+        else
+            render json: {result: false}
+        end
+    end
 end
