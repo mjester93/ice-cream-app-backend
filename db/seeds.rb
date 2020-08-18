@@ -29,6 +29,11 @@ Store.create({name: "Bon Matcha", location: "Washington, DC", latitude: 38.90116
 Store.create({name: "Nicecream", location: "Washington, DC", latitude: 38.923176, longitude: -77.042345})
 Store.create({name: "Thomas Sweet", location: "Washington, DC", latitude: 38.909112, longitude: -77.064073 })
 
+#BMORE
+Store.create({name: "The Charmery", location: "Baltimore, MD", latitude: 39.331097, longitude: -76.629548})
+Store.create({name: "BMore Licks", location: "Baltimore, MD", latitude: 39.285860, longitude: -76.581577})
+Store.create({name: "Taharka Brothers", location: "Baltimore, MD", latitude: 39.284197, longitude: -76.593368})
+Store.create({name: "Pitango Gelato", location: "Baltimore, MD", latitude: 39.282389, longitude: -76.593708})
 
 # Adding Three Ice Creams to each store
 Store.all.each do |store|
