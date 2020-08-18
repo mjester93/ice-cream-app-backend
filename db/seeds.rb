@@ -23,7 +23,7 @@ end
 brambleberry = IceCream.create({flavor: "Brambleberry Crisp", calories: 320})
 goatcheese = IceCream.create({flavor: "Goat Cheese with Red Cherries", calories: 320})
 pistachhoney = IceCream.create({flavor: "Pistachio & Honey", calories: 320})
-matchasoft = IceCream.create({flavor: "Matcha", calories: 150})
+matcha = IceCream.create({flavor: "Matcha", calories: 150})
 hojicha = IceCream.create({flavor: "Hojicha", calories: 125})
 vietcoffee = IceCream.create({flavor: "Vietnamese Coffee", calories: 190})
 pboreo = IceCream.create({flavor: "Peanut Butter Oreo", calories: 350})
