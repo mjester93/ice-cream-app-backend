@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :ice_cream_stores
   resources :ice_creams
   resources :stores
-  resources :users, only: [:create, :index]
+  resources :users, only: [:create, :index, :show]
   
   post '/login', to: 'auth#create'
   get '/check-favorite-store', to: 'favorite_stores#is_user_favorite'

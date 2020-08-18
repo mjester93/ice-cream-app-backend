@@ -5,6 +5,21 @@ class UsersController < ApplicationController
         users = User.all
         render json: users
     end
+
+    def show
+        user = User.find(params[:id])
+
+        render json: user.to_json(
+            :include => {
+                :favorite_stores => {
+                    :include => [:store]
+                },
+                :reviews => {
+                    :include => [:store]
+                }
+            }
+        )
+    end
   
     def create
         user = User.new(user_params)
