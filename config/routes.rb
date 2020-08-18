@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   
   post '/login', to: 'auth#create'
   get '/check-favorite-store', to: 'favorite_stores#is_user_favorite'
+  get '/delete-favorite-store', to: 'favorite_stores#delete_favorite_store'
 end
