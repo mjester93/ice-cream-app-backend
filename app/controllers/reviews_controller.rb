@@ -5,8 +5,6 @@ class ReviewsController < ApplicationController
         review = Review.new(review_params)
         review.avatar.attach(params[:photo])
 
-        byebug
-
         if review.valid?
             review.save
             render json: review.to_json(
