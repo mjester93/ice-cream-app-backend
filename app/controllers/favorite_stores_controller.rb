@@ -27,5 +27,7 @@ class FavoriteStoresController < ApplicationController
 
     def delete_favorite_store
         favorite_store = FavoriteStore.find_by(user_id: params[:user_id], store_id: params[:store_id]).destroy
+
+        render json: favorite_store
     end
 end
