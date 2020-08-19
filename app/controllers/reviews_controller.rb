@@ -3,8 +3,6 @@ class ReviewsController < ApplicationController
 
     def create 
 
-        byebug
-
         review = Review.new(review_params)
         review.avatar.attach(params[:photo])
 
