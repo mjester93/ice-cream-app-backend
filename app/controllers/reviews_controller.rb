@@ -2,11 +2,17 @@ class ReviewsController < ApplicationController
     skip_before_action :logged_in?
 
     def create 
+
+        byebug
+
         review = Review.new(review_params)
         review.avatar.attach(params[:photo])
 
         if review.valid?
             review.save
+
+            review.update(photo: url_for(review.avatar))
+
             render json: review.to_json(
                 :only => [:text, :rating, :photo],
                 :include => {
@@ -23,7 +29,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:reviewData).permit(:user_id, :store_id, :text, :rating, :photo)
+        params.permit(:user_id, :store_id, :text, :rating, :photo)
     end
 
 end
