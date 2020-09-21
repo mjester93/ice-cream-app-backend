@@ -12,3 +12,5 @@ class AuthController < ApplicationController
     end
 
 end
+
+# this is for logging in with password and keeping is secure! 

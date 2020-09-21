@@ -33,15 +33,20 @@ vanilla = IceCream.create({flavor: "Vanilla", calories: 200})
 
 
 # Creating Stores (name, location, lat, lon)
-
-jenis = Store.create({name: "Jeni's Splendid Ice Creams", location: 'Washington, DC', latitude: 38.916372, longitude: -77.031662})
+# DC
+jenis = Store.create({name: "Jeni's Splendid Ice Creams (U St & 14th)", location: 'Washington, DC', latitude: 38.916372, longitude: -77.031662})
 Store.create({name: "Presidential Scoops", location: "Washington, DC", latitude: 38.898196, longitude: -77.033031})
-jubilee = Store.create({name: "Ice Cream Jubilee", location: "Washington, DC", latitude: 38.873667, longitude: -77.001386})
+jubilee = Store.create({name: "Ice Cream Jubilee (Navy Yard)", location: "Washington, DC", latitude: 38.873667, longitude: -77.001386})
 bonmatcha = Store.create({name: "Bon Matcha", location: "Washington, DC", latitude: 38.901166, longitude: -77.044741})
 Store.create({name: "Nicecream", location: "Washington, DC", latitude: 38.923176, longitude: -77.042345})
 Store.create({name: "Thomas Sweet", location: "Washington, DC", latitude: 38.909112, longitude: -77.064073 })
+Store.create({name: "Dolci Gelati Cafe", location: "Washington, DC", latitude: 38.909099, longitude: -77.023154})
+Store.create({name: "Dolcezza Gelato & Coffee", location: "Washington, DC", latitude: 38.909510, longitude: -77.032201})
+Store.create({name: "Haagen Dazs (Union Station)", location: "Washington, DC", latitude: 38.897905, longitude: -77.005526})
+Store.create({name: "Ben & Jerry's (The Wharf)", location: "Washington, DC", latitude: 38.878290, longitude: -77.023856})
+jubilee2 = Store.create({name: "Ice Cream Jubilee (T St & 14th)", location: "Washington, DC", latitude: 38.915782, longitude: -77.032425})
 
-#BMORE
+# BMORE
 Store.create({name: "The Charmery", location: "Baltimore, MD", latitude: 39.331097, longitude: -76.629548})
 bmore = Store.create({name: "BMore Licks", location: "Baltimore, MD", latitude: 39.285860, longitude: -76.581577})
 Store.create({name: "Taharka Brothers", location: "Baltimore, MD", latitude: 39.284197, longitude: -76.593368})
@@ -61,6 +66,8 @@ IceCreamStore.create({store_id: bonmatcha.id, ice_cream_id: hojicha.id})
 IceCreamStore.create({store_id: bonmatcha.id, ice_cream_id: vietcoffee.id})
 IceCreamStore.create({store_id: jubilee.id, ice_cream_id: matcha.id})
 IceCreamStore.create({store_id: jubilee.id, ice_cream_id: vietcoffee.id})
+IceCreamStore.create({store_id: jubilee2.id, ice_cream_id: vietcoffee.id})
+IceCreamStore.create({store_id: jubilee2.id, ice_cream_id: matcha.id})
 IceCreamStore.create({store_id: pitango.id, ice_cream_id: hojicha.id})
 IceCreamStore.create({store_id: pitango.id, ice_cream_id: pistachhoney.id})
 IceCreamStore.create({store_id: bmore.id, ice_cream_id: pboreo.id})
