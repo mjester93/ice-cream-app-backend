@@ -24,6 +24,8 @@ class ReviewsController < ApplicationController
         end
     end
 
+    # add a destroy method to delete review 
+
     private
 
     def review_params

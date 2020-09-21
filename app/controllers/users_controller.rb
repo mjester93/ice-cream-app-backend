@@ -20,6 +20,8 @@ class UsersController < ApplicationController
             }
         )
     end
+
+    # this is to create a new account 
   
     def create
         user = User.new(user_params)
@@ -31,6 +33,8 @@ class UsersController < ApplicationController
             render json: {error: "Failed to create the user"}
         end
     end
+
+    # add a destroy method to delete account 
 
     private
 
